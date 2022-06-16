@@ -74,20 +74,17 @@
             <h2 class="mb-6 text-sm font-semibold text-gray-400 uppercase">Company</h2>
             <ul>
                 <li class="mb-4">
-                    <a href="#"
-                        class="text-gray-600 hover:underline dark:text-gray-400 hover:text-blue-300">About</a>
+                    <a href="#" class="text-gray-600 hover:underline dark:text-gray-400 hover:text-blue-300">About</a>
                 </li>
                 <li class="mb-4">
-                    <a href="#"
-                        class="text-gray-600 hover:underline dark:text-gray-400 hover:text-blue-300">Careers</a>
+                    <a href="#" class="text-gray-600 hover:underline dark:text-gray-400 hover:text-blue-300">Careers</a>
                 </li>
                 <li class="mb-4">
                     <a href="#" class="text-gray-600 hover:underline dark:text-gray-400 hover:text-blue-300">Brand
                         Center</a>
                 </li>
                 <li class="mb-4">
-                    <a href="#"
-                        class="text-gray-600 hover:underline dark:text-gray-400 hover:text-blue-300">Blog</a>
+                    <a href="#" class="text-gray-600 hover:underline dark:text-gray-400 hover:text-blue-300">Blog</a>
                 </li>
             </ul>
         </div>
@@ -95,17 +92,14 @@
             <h2 class="mb-6 text-sm font-semibold text-gray-400 uppercase">Help center</h2>
             <ul>
                 <li class="mb-4">
-                    <a href="#"
-                        class="text-gray-600 hover:underline dark:text-gray-400 hover:text-blue-300">Discord
+                    <a href="#" class="text-gray-600 hover:underline dark:text-gray-400 hover:text-blue-300">Discord
                         Server</a>
                 </li>
                 <li class="mb-4">
-                    <a href="#"
-                        class="text-gray-600 hover:underline dark:text-gray-400 hover:text-blue-300">Twitter</a>
+                    <a href="#" class="text-gray-600 hover:underline dark:text-gray-400 hover:text-blue-300">Twitter</a>
                 </li>
                 <li class="mb-4">
-                    <a href="#"
-                        class="text-gray-600 hover:underline dark:text-gray-400 hover:text-blue-300">Facebook
+                    <a href="#" class="text-gray-600 hover:underline dark:text-gray-400 hover:text-blue-300">Facebook
                     </a>
                 </li><a href="#" class="text-gray-600 hover:underline dark:text-gray-400 hover:text-blue-300">
                 </a>
@@ -125,8 +119,7 @@
             <h2 class="mb-6 text-sm font-semibold text-gray-400 uppercase">Legal</h2>
             <ul>
                 <li class="mb-4">
-                    <a href="#"
-                        class="text-gray-600 hover:underline dark:text-gray-400 hover:text-blue-300">Privacy
+                    <a href="#" class="text-gray-600 hover:underline dark:text-gray-400 hover:text-blue-300">Privacy
                         Policy</a>
                 </li>
                 <li class="mb-4">
@@ -134,8 +127,7 @@
                         class="text-gray-600 hover:underline dark:text-gray-400 hover:text-blue-300">Licensing</a>
                 </li>
                 <li class="mb-4">
-                    <a href="#"
-                        class="text-gray-600 hover:underline dark:text-gray-400 hover:text-blue-300">Terms &amp;
+                    <a href="#" class="text-gray-600 hover:underline dark:text-gray-400 hover:text-blue-300">Terms &amp;
                         Conditions</a>
                 </li>
             </ul>
@@ -144,20 +136,16 @@
             <h2 class="mb-6 text-sm font-semibold text-gray-400 uppercase">Download</h2>
             <ul>
                 <li class="mb-4">
-                    <a href="#"
-                        class="text-gray-600 hover:underline dark:text-gray-400 hover:text-blue-300">iOS</a>
+                    <a href="#" class="text-gray-600 hover:underline dark:text-gray-400 hover:text-blue-300">iOS</a>
                 </li>
                 <li class="mb-4">
-                    <a href="#"
-                        class="text-gray-600 hover:underline dark:text-gray-400 hover:text-blue-300">Android</a>
+                    <a href="#" class="text-gray-600 hover:underline dark:text-gray-400 hover:text-blue-300">Android</a>
                 </li>
                 <li class="mb-4">
-                    <a href="#"
-                        class="text-gray-600 hover:underline dark:text-gray-400 hover:text-blue-300">Windows</a>
+                    <a href="#" class="text-gray-600 hover:underline dark:text-gray-400 hover:text-blue-300">Windows</a>
                 </li>
                 <li class="mb-4">
-                    <a href="#"
-                        class="text-gray-600 hover:underline dark:text-gray-400 hover:text-blue-300">MacOS</a>
+                    <a href="#" class="text-gray-600 hover:underline dark:text-gray-400 hover:text-blue-300">MacOS</a>
                 </li>
             </ul>
         </div>
@@ -283,4 +271,5 @@
         height: 100%;
         background-color: #000;
     }
+
 </style>
