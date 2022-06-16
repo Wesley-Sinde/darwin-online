@@ -35,7 +35,7 @@ class HomeController extends Controller
             // ]);
             User::where('id', Auth::User()->id)
                 ->update([
-                    'PurchaseNo' => now()->timestamp
+                    'PurchaseNo' => mt_rand(10000000, 99999999)
                 ]);
         }
 
@@ -53,6 +53,7 @@ class HomeController extends Controller
     public function Cart(Request $request)
     {
         $Product = DB::table('purchase_items')
+            ->where('PurchaseNo', Auth::user()->PurchaseNo)
             ->leftJoin('Products', 'purchase_items.ProductNo', '=', 'Products.id')
             ->get();
 
@@ -61,27 +62,31 @@ class HomeController extends Controller
 
         // return view('home');
     }
-    public function storetocart(Request $request)
+    public function buy(Request $request)
     {
 
         Purchase::create([
             'email' => Auth::User()->email,
-            'PurchaseNo' => $request->input('PurchaseNo'),
+            'PurchaseNo' => Auth::user()->PurchaseNo,
         ]);
 
-        $details = [
+        $Product = DB::table('purchase_items')
+            ->leftJoin('Products', 'purchase_items.ProductNo', '=', 'Products.id')
+            ->get();
 
-            'title' => 'Mail from darwinonline',
 
-            'body' => 'Your order has been placed successfully Your Purchase number is ' . $request->input('PurchaseNo')
+        User::where('id', Auth::User()->id)
+            ->update([
+                'PurchaseNo' => '0'
+            ]);
+        //dd(Auth::User()->id);
+        $details = $Product;
 
-        ];
 
         \Mail::to(Auth::User()->email)->send(new \App\Mail\NewMail($details)); //enter org email
 
         \Mail::to('sindewesley5@gmail.com')->send(new \App\Mail\NewMail($details)); //enter org email
         // dd("Email is Sent.");
-
         return redirect('/home')->with('message', 'Your order has been place check your email');
     }
 

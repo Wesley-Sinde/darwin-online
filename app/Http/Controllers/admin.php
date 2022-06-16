@@ -21,7 +21,6 @@ class admin extends Controller
         $request->validate([
             'Price' => 'required',
             'Category' => 'required',
-            'ProductNo' => 'required',
             'Description' => 'required',
             'Colour' => 'required',
             'Size' => 'required',
@@ -32,7 +31,6 @@ class admin extends Controller
         $request->image->move(public_path('images'), $newImageName);
 
         Product::create([
-            'ProductNo' => $request->input('ProductNo'),
             'Price' => $request->input('Price'),
             'Category' => $request->input('Category'),
             'Description' => $request->input('Description'),

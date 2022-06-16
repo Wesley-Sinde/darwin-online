@@ -21,8 +21,8 @@ class NewMail extends Mailable
 
     {
 
-        return $this->subject('Mail from darwinonline')
+        return $this->subject('Mail from  online.com')
 
-            ->view('emails.myTestMail');
+            ->markdown('emails.myTestMail');
     }
 }

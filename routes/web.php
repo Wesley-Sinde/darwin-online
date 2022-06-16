@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\admin;
+use App\Http\Controllers\PostsController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -15,9 +16,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/',  [App\Http\Controllers\PostsController::class, 'index']);
 
 Auth::routes();
 
@@ -25,4 +24,8 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::POST('/home', [App\Http\Controllers\HomeController::class, 'store'])->name('store');
 Route::get('/profile', [UserController::class, 'profile'])->name('profile');
 Route::get('/admin', [admin::class, 'index'])->name('admin');
+Route::post('/admin', [admin::class, 'store'])->name('admin');
 Route::get('/Cart', [App\Http\Controllers\HomeController::class, 'Cart'])->name('Cart');
+Route::get('/buy', [App\Http\Controllers\HomeController::class, 'buy'])->name('buy');
+Route::get('/testimonials', [App\Http\Controllers\generalController::class, '/testimonials'])->name('/testimonials');
+Route::resource('/blog', PostsController::class);
