@@ -15,18 +15,26 @@ return new class extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
+            $table->string('CustFName');
+            $table->string('CustLName');
+            $table->string('Title');
+            $table->string('Address');
+            $table->string('City');
+            $table->string('State');
+            $table->string('Country');
+            $table->string('Phone');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
+            $table->integer('PostCode');
         });
     }
 
     /**
      * Reverse the migrations.
-     *
+     * CustEmail CustFName CustLName Title Address City State Country PostCode Phone
      * @return void
      */
     public function down()
