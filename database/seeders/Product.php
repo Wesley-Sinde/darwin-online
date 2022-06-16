@@ -20,7 +20,7 @@ class Product extends Seeder
         $faker = Faker::create('App\Product');
 
         for ($i = 1; $i <= 100; $i++) {
-            DB::table('Product')->insert([
+            DB::table('Products')->insert([
                 'description' => $faker->sentence(),
                 'Colour' => $faker->sentence(),
                 'Category' => $faker->sentence(),

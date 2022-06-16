@@ -123,7 +123,11 @@
                             </a>
                         </span>
                     </a>
-
+                    <a href="/admin" target="_blank"
+                        class="self-center text-xl font-semibold text-gray-600 whitespace-nowrap dark:text-gray-400 hover:text-blue-300 "
+                        rel="noopener noreferrer">
+                        Go to Admin Page
+                    </a>
 
 
                     <div class="flex items-center order-2 m-auto mt-0">
