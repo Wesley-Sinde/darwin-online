@@ -1,9 +1,6 @@
     @extends('layouts.app')
-
     @section('content')
-        <div class="flex">
-
-        
+        <div class="flex">        
             <section class="m-4 bg-white border rounded-md dark:bg-gray-900">
                 <div class="grid-cols-1 gap-3 py-8 mx-auto border-b border-gray-200 sm:grid">
                     <div class="">

@@ -4,9 +4,8 @@
     @section('content')
         <div class="w-full px-2 mx-auto max-w-8xl">
             <div class="flex">
-               
-                <main class="flex-1 max-h-full px-4 overflow-hidden overflow-y-scroll text-center ">
 
+                <main class="flex-1 max-h-full px-4 overflow-hidden overflow-y-scroll text-center ">
 
                     <script type="application/javascript" src="https://cdn.jsdelivr.net/gh/virae/we-stand-with-ukraine@v1.0.2/badge.js"
                                         defer></script>
