@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use App\Models\Product;
 use App\Models\Purchase;
 use App\Models\PurchaseItem;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
@@ -27,6 +29,16 @@ class HomeController extends Controller
      */
     public function index(Request $request)
     {
+        if (Auth::user()->PurchaseNo == 0) {
+            // User::Create([
+            //     'PurchaseNo' => uniqid()
+            // ]);
+            User::where('id', Auth::User()->id)
+                ->update([
+                    'PurchaseNo' => now()->timestamp
+                ]);
+        }
+
         $Product = Product::orderBy('created_at', 'desc')->paginate(5);
 
         //  dd($Product);
@@ -38,27 +50,24 @@ class HomeController extends Controller
         // return view('home');
     }
 
-    public function store(Request $request)
+    public function Cart(Request $request)
     {
-        // Quantity PurchaseNo ProductNo
-        $request->validate([
-            'Quantity' => 'required',
-            'PurchaseNo' => 'required',
-            'ProductNo' => 'required'
-        ]);
+        $Product = DB::table('purchase_items')
+            ->leftJoin('Products', 'purchase_items.ProductNo', '=', 'Products.id')
+            ->get();
 
+        //dd($Product);
+        return view('cart', compact('Product'));
+
+        // return view('home');
+    }
+    public function storetocart(Request $request)
+    {
 
         Purchase::create([
             'email' => Auth::User()->email,
             'PurchaseNo' => $request->input('PurchaseNo'),
         ]);
-
-        PurchaseItem::create([
-            'Quantity' => $request->input('Quantity'),
-            'PurchaseNo' => $request->input('PurchaseNo'),
-            'ProductNo' => $request->input('ProductNo'),
-        ]);
-
 
         $details = [
 
@@ -74,5 +83,31 @@ class HomeController extends Controller
         // dd("Email is Sent.");
 
         return redirect('/home')->with('message', 'Your order has been place check your email');
+    }
+
+    public function store(Request $request)
+    {
+
+        // Quantity PurchaseNo ProductNo
+        $request->validate([
+            'Quantity' => 'required',
+            'ProductNo' => 'required'
+        ]);
+
+
+        // Purchase::create([
+        //     'email' => Auth::User()->email,
+        //     'PurchaseNo' => $request->input('PurchaseNo'),
+        // ]);
+
+        PurchaseItem::create([
+            'Quantity' => $request->input('Quantity'),
+            'PurchaseNo' => Auth::user()->PurchaseNo,
+            'ProductNo' => $request->input('ProductNo'),
+        ]);
+
+
+
+        return redirect('/home')->with('message', 'Your art has been added to cart When Yoy are done check your cart');
     }
 }

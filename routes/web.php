@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\admin;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -23,3 +24,5 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::POST('/home', [App\Http\Controllers\HomeController::class, 'store'])->name('store');
 Route::get('/profile', [UserController::class, 'profile'])->name('profile');
+Route::get('/admin', [admin::class, 'index'])->name('admin');
+Route::get('/Cart', [App\Http\Controllers\HomeController::class, 'Cart'])->name('Cart');

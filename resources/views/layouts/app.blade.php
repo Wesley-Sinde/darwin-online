@@ -124,8 +124,13 @@
                         </span>
                     </a>
                     <a href="/admin" target="_blank"
-                        class="self-center text-xl font-semibold text-gray-600 whitespace-nowrap dark:text-gray-400 hover:text-blue-300 "
-                        rel="noopener noreferrer">
+                        class="self-center text-lg font-semibold text-gray-600 whitespace-nowrap dark:text-gray-400 hover:text-blue-300 flex"
+                        rel="noopener noreferrer ">
+                        <svg class="w-8 h-8 animate-pulse px-2" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
+                                clip-rule="evenodd"></path>
+                        </svg>
                         Go to Admin Page
                     </a>
 
@@ -326,8 +331,8 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="{{ url('/Contact') }}"
-                                    class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700  {{ request()->segment(1) == 'Contact' ? 'text-blue-700 hover:text-blue-700 dark:text-blue-500' : '' }}">Contact</a>
+                                <a href="{{ url('/Cart') }}"
+                                    class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700  {{ request()->segment(1) == 'Contact' ? 'text-blue-700 hover:text-blue-700 dark:text-blue-500' : '' }}">Cart</a>
                             </li>
                             <li>
                                 <div

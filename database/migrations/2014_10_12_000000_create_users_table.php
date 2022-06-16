@@ -29,6 +29,7 @@ return new class extends Migration
             $table->rememberToken();
             $table->timestamps();
             $table->integer('PostCode');
+            $table->integer('PurchaseNo');
             $table->boolean('admin')->default('0');
         });
     }
